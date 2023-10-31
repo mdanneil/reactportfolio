@@ -1,4 +1,5 @@
-import * as React from 'react'
+import React from 'react'
+import { Link } from 'react-scroll' // Import Link from react-scroll
 import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box'
 import CssBaseline from '@mui/material/CssBaseline'
@@ -31,11 +32,18 @@ const Header = () => {
 			</Typography>
 			<Divider />
 			<List>
-				{navItems.map((item) => (
+				{navItems.map((item, index) => (
 					<ListItem key={item} disablePadding>
-						<ListItemButton sx={{ textAlign: 'center' }}>
-							<ListItemText primary={item} />
-						</ListItemButton>
+						<Link
+							to={item.toLowerCase()} // Use the section ID as the target
+							smooth={true}
+							duration={500}
+							offset={-64} // Adjust the offset if needed to accommodate the AppBar
+						>
+							<ListItemButton sx={{ textAlign: 'center' }}>
+								<ListItemText primary={item} />
+							</ListItemButton>
+						</Link>
 					</ListItem>
 				))}
 			</List>
@@ -43,55 +51,67 @@ const Header = () => {
 	)
 
 	return (
-		<Box sx={{ display: 'flex' }}>
-			<CssBaseline />
-			<AppBar component='nav'>
-				<Toolbar>
-					<IconButton
-						color='inherit'
-						aria-label='open drawer'
-						edge='start'
-						onClick={handleDrawerToggle}
-						sx={{ mr: 2, display: { sm: 'none' } }}>
-						<MenuIcon />
-					</IconButton>
-					<Typography
-						variant='h6'
-						component='div'
+		<div>
+			<Box sx={{ display: 'flex' }}>
+				<CssBaseline />
+				<AppBar component='nav'>
+					<Toolbar>
+						<IconButton
+							color='inherit'
+							aria-label='open drawer'
+							edge='start'
+							onClick={handleDrawerToggle}
+							sx={{ mr: 2, display: { sm: 'none' } }}>
+							<MenuIcon />
+						</IconButton>
+						<Typography
+							variant='h6'
+							component='div'
+							sx={{
+								flexGrow: 1,
+								display: { xs: 'none', sm: 'block' },
+							}}>
+							Marcus
+						</Typography>
+						<Box
+							sx={{
+								display: { xs: 'none', sm: 'block' },
+							}}>
+							{navItems.map((item, index) => (
+								<Link
+									key={item}
+									to={item.toLowerCase()}
+									smooth={true}
+									duration={500}
+									offset={-64}>
+									<Button sx={{ color: '#CDCDCD' }}>
+										{item}
+									</Button>
+								</Link>
+							))}
+						</Box>
+					</Toolbar>
+				</AppBar>
+				<nav>
+					<Drawer
+						variant='temporary'
+						open={mobileOpen}
+						onClose={handleDrawerToggle}
+						ModalProps={{
+							keepMounted: true,
+						}}
 						sx={{
-							flexGrow: 1,
-							display: { xs: 'none', sm: 'block' },
+							display: { xs: 'block', sm: 'none' },
+							'& .MuiDrawer-paper': {
+								boxSizing: 'border-box',
+								width: drawerWidth,
+							},
 						}}>
-						Marcus
-					</Typography>
-					<Box sx={{ display: { xs: 'none', sm: 'block' } }}>
-						{navItems.map((item) => (
-							<Button key={item} sx={{ color: '#CDCDCD' }}>
-								{item}
-							</Button>
-						))}
-					</Box>
-				</Toolbar>
-			</AppBar>
-			<nav>
-				<Drawer
-					variant='temporary'
-					open={mobileOpen}
-					onClose={handleDrawerToggle}
-					ModalProps={{
-						keepMounted: true,
-					}}
-					sx={{
-						display: { xs: 'block', sm: 'none' },
-						'& .MuiDrawer-paper': {
-							boxSizing: 'border-box',
-							width: drawerWidth,
-						},
-					}}>
-					{drawer}
-				</Drawer>
-			</nav>
-		</Box>
+						{drawer}
+					</Drawer>
+				</nav>
+			</Box>
+		</div>
 	)
 }
 
