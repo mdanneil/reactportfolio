@@ -14,13 +14,27 @@ import Toolbar from '@mui/material/Toolbar'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Slide, useScrollTrigger } from '@mui/material'
 
 const drawerWidth = 240
 const navItems = ['About', 'Projects', 'Contact']
+interface Props {
+	children: React.ReactElement
+}
+
+function HideOnScroll(props: Props) {
+	const { children } = props
+	const trigger = useScrollTrigger()
+
+	return (
+		<Slide appear={false} direction='down' in={!trigger}>
+			{children}
+		</Slide>
+	)
+}
 
 const Header = () => {
 	const [mobileOpen, setMobileOpen] = React.useState(false)
-
 	const handleDrawerToggle = () => {
 		setMobileOpen((prevState) => !prevState)
 	}
@@ -35,11 +49,10 @@ const Header = () => {
 				{navItems.map((item, index) => (
 					<ListItem key={item} disablePadding>
 						<Link
-							to={item.toLowerCase()} // Use the section ID as the target
+							to={item.toLowerCase()}
 							smooth={true}
 							duration={500}
-							offset={-64} // Adjust the offset if needed to accommodate the AppBar
-						>
+							offset={-64}>
 							<ListItemButton sx={{ textAlign: 'center' }}>
 								<ListItemText primary={item} />
 							</ListItemButton>
@@ -54,44 +67,46 @@ const Header = () => {
 		<div>
 			<Box sx={{ display: 'flex' }}>
 				<CssBaseline />
-				<AppBar component='nav'>
-					<Toolbar>
-						<IconButton
-							color='inherit'
-							aria-label='open drawer'
-							edge='start'
-							onClick={handleDrawerToggle}
-							sx={{ mr: 2, display: { sm: 'none' } }}>
-							<MenuIcon />
-						</IconButton>
-						<Typography
-							variant='h6'
-							component='div'
-							sx={{
-								flexGrow: 1,
-								display: { xs: 'none', sm: 'block' },
-							}}>
-							Marcus
-						</Typography>
-						<Box
-							sx={{
-								display: { xs: 'none', sm: 'block' },
-							}}>
-							{navItems.map((item, index) => (
-								<Link
-									key={item}
-									to={item.toLowerCase()}
-									smooth={true}
-									duration={500}
-									offset={-64}>
-									<Button sx={{ color: '#CDCDCD' }}>
-										{item}
-									</Button>
-								</Link>
-							))}
-						</Box>
-					</Toolbar>
-				</AppBar>
+				<HideOnScroll>
+					<AppBar component='nav'>
+						<Toolbar>
+							<IconButton
+								color='inherit'
+								aria-label='open drawer'
+								edge='start'
+								onClick={handleDrawerToggle}
+								sx={{ mr: 2, display: { sm: 'none' } }}>
+								<MenuIcon />
+							</IconButton>
+							<Typography
+								variant='h6'
+								component='div'
+								sx={{
+									flexGrow: 1,
+									display: { xs: 'none', sm: 'block' },
+								}}>
+								Marcus
+							</Typography>
+							<Box
+								sx={{
+									display: { xs: 'none', sm: 'block' },
+								}}>
+								{navItems.map((item, index) => (
+									<Link
+										key={item}
+										to={item.toLowerCase()}
+										smooth={true}
+										duration={500}
+										offset={-64}>
+										<Button sx={{ color: '#CDCDCD' }}>
+											{item}
+										</Button>
+									</Link>
+								))}
+							</Box>
+						</Toolbar>
+					</AppBar>
+				</HideOnScroll>
 				<nav>
 					<Drawer
 						variant='temporary'
