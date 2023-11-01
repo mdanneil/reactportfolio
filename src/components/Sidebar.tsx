@@ -22,10 +22,24 @@ const Sidebar = () => {
 				height: '100%',
 				backgroundColor: 'transparent',
 			}}>
-			<Typography variant='h4' sx={{ my: 2, textAlign: 'left' }}>
+			<Typography
+				variant='h5'
+				sx={{
+					m: 2,
+					textAlign: 'left',
+					fontFamily: 'Montserrat',
+					fontWeight: 300,
+				}}>
 				Marcus Danneil Wahlström
 			</Typography>
-			<Typography variant='h6' sx={{ my: 2, textAlign: 'left' }}>
+			<Typography
+				variant='h6'
+				sx={{
+					m: 2,
+					textAlign: 'left',
+					fontFamily: 'Montserrat',
+					fontWeight: 400,
+				}}>
 				Fullstackutvecklare
 			</Typography>
 			<List>
@@ -36,7 +50,13 @@ const Sidebar = () => {
 							smooth={true}
 							duration={500}>
 							<ListItemButton>
-								<ListItemText primary={item} />
+								<Typography
+									sx={{
+										fontFamily: 'Montserrat',
+										fontWeight: 500,
+									}}>
+									{item}
+								</Typography>
 							</ListItemButton>
 						</Link>
 					</ListItem>
