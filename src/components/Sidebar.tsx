@@ -8,7 +8,7 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import theme from '../theme'
 
-const navItems = ['About', 'Projects', 'Contact']
+const navItems = ['Om mig', 'Projekt', 'Kontakt']
 
 const Sidebar = () => {
 	return (
@@ -22,8 +22,11 @@ const Sidebar = () => {
 				height: '100%',
 				backgroundColor: 'transparent',
 			}}>
+			<Typography variant='h4' sx={{ my: 2, textAlign: 'left' }}>
+				Marcus Danneil Wahlström
+			</Typography>
 			<Typography variant='h6' sx={{ my: 2, textAlign: 'left' }}>
-				Marcus
+				Fullstackutvecklare
 			</Typography>
 			<List>
 				{navItems.map((item, index) => (
