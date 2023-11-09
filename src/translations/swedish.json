@@ -1,5 +1,11 @@
 {
-  "about": "Om mig",
-  "projects": "Projekt",
-  "contact": "Kontakt"
+  "About": {
+    "about": "Om mig"
+  },
+  "Projects": {
+    "projects": "Projekt"
+  },
+  "Contact": {
+    "contact": "Kontakt"
+  }
 }

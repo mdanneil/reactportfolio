@@ -1,5 +1,11 @@
 {
-  "about": "About Me",
-  "projects": "Projects",
-  "contact": "Contact"
+  "About": {
+    "about": "About me"
+  },
+  "Projects": {
+    "projects": "Projects"
+  },
+  "Contact": {
+    "contact": "Contact"
+  }
 }

@@ -14,7 +14,7 @@ const About = () => {
         style={{ height: "100vh" }}
       >
         <Grid item>
-          <Typography variant="h5">{t("about")}</Typography>
+          <Typography variant="h5">{t("About.about")}</Typography>
         </Grid>
       </Grid>
     </section>
