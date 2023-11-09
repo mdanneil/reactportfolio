@@ -17,29 +17,24 @@ const About = () => {
       >
         <div
           style={{
-            width: "300px", // Set your desired width
-            height: "350px", // Set your desired height
-            borderRadius: "20%", // Make it round
-            overflow: "hidden", // Hide overflow to ensure a perfect circle
-            marginBottom: "20px", // Add margin for spacing
+            width: "300px",
+            height: "350px",
+            borderRadius: "20%",
+            overflow: "hidden",
+            marginBottom: "20px",
           }}
         >
           <img
             src={imagePath}
             alt="Profile"
             style={{
-              width: "100%", // Take up 100% of the container
-              height: "auto", // Maintain aspect ratio
-              display: "block", // Remove any default spacing issues
+              width: "100%",
+              height: "auto",
+              display: "block",
             }}
           />
         </div>
-        <Grid
-          item
-          width={"50%"}
-          textAlign={"center"}
-          sx={{ backgroundColor: "#B0B0B0", borderRadius: "10px" }}
-        >
+        <Grid item width={"50%"} textAlign={"center"}>
           <Typography variant="h5">{t("About.about")}</Typography>
           <p></p>
           <Typography variant="h5">{t("About.personality")}</Typography>
