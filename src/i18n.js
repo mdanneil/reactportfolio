@@ -1,25 +1,21 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import englishTranslations from './translations/english.json'
+import swedishTranslations from './translations/swedish.json'
+
+const resources = {
+  en: {
+    translation: englishTranslations,
+  },
+  sv: {
+    translation: swedishTranslations,
+  },
+};
 
 i18n
   .use(initReactI18next)
   .init({
-    resources: {
-      en: {
-        translation: {
-          about: 'About Me',
-          projects: 'Projects',
-          contact: 'Contact',
-        },
-      },
-      sv: {
-        translation: {
-          about: 'Om mig',
-          projects: 'Projekt',
-          contact: 'Kontakt',
-        },
-      },
-    },
+    resources,
     fallbackLng: 'sv',
     debug: true,
     interpolation: {
