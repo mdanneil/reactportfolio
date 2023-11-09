@@ -1,6 +1,8 @@
 {
   "About": {
-    "about": "About me"
+    "about": "31 years old, born and raised in Uppsala but moved to Gothenburg in 2020 to study System Development Java. I've worked in various fields, including Ica, demolition/sanitation, electrical assembly in medtech, night bus driver, and overseeing a couple of hundred hectares of cotton fields while backpacking. I love the social aspect of service professions and the problem-solving in the development profession!",
+    "personality": "I am a very social, cheerful, and positive person, and I would describe myself as a spreader of joy. I am a dedicated nerd and can't resist delving into anything that sparks even the slightest interest. One of my life's passions is learning things, whether it's about growing chili peppers, modding headphones, or finding the best material for socks. The key is that I get to read and learn something.",
+    "interests": "When I'm not coding, I've recently taken up fishing, so when the weather allows, I enjoy being outdoors fishing or simply in nature. If the weather doesn't cooperate, I like to cook an interesting dish, read a good book, or play games. If there's an interesting football match on, I'm happy to watch it. I also love practicing all sorts of sports and have played a variety of them during my upbringing."
   },
   "Projects": {
     "projects": "Projects"
