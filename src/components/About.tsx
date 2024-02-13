@@ -24,7 +24,7 @@ const About = () => {
             marginBottom: "20px",
           }}
         >
-          <img
+          {/* <img
             src={imagePath}
             alt="Profile"
             style={{
@@ -32,9 +32,18 @@ const About = () => {
               height: "auto",
               display: "block",
             }}
-          />
+          /> */}
         </div>
-        <Grid item width={"50%"} textAlign={"center"}>
+        <Grid
+          item
+          xs={12}
+          sm={8}
+          md={6}
+          lg={4}
+          xl={3}
+          width={"50%"}
+          textAlign={"center"}
+        >
           <Typography variant="h5">{t("About.about")}</Typography>
           <p></p>
           <Typography variant="h5">{t("About.personality")}</Typography>
