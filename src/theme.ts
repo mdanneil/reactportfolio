@@ -2,8 +2,8 @@ const theme = {
 	light: {
 		primary: '#B0B0B0',
 		secondary: '#B8926A',
-		primaryBackground: '#D4C8BE',
-		secondaryBackground: '#F0F0F0', // Light background color for the entire page
+		primaryBackground: '#f19066',
+		secondaryBackground: '#f3a683', // Light background color for the entire page
 		text: '#2D2D2B',
 	},
 	dark: {

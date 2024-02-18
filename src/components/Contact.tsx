@@ -1,20 +1,75 @@
-import { Grid, Typography } from '@mui/material'
 import React from 'react'
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
 
-const Contact = () => {
+function ContactForm() {
 	return (
-		<section id='kontakt'>
-			<Grid
-				container
-				justifyContent='center'
-				alignItems='center'
-				style={{ height: '100vh' }}>
-				<Grid item>
-					<Typography variant='h5'>Kontakt</Typography>
+		<Container maxWidth='sm'>
+			<form
+				action='https://public.herotofu.com/v1/348a8fd0-78af-11ee-b9fd-a16a30a6940d'
+				method='post'
+				acceptCharset='UTF-8'>
+				<Typography variant='h4' align='center' gutterBottom>
+					{'Contact Form'.toUpperCase()}
+				</Typography>
+				<Grid
+					container
+					direction='column'
+					alignItems='center'
+					spacing={2}>
+					<Grid item xs={12}>
+						<TextField
+							fullWidth
+							label='Your Name'
+							id='name'
+							type='text'
+							name='Name'
+							required
+						/>
+					</Grid>
+					<Grid item xs={12}>
+						<TextField
+							fullWidth
+							label='Your Email'
+							id='email'
+							type='email'
+							name='Email'
+							required
+						/>
+					</Grid>
+					<Grid item xs={12}>
+						<TextField
+							fullWidth
+							label='Message'
+							id='message'
+							name='Message'
+							required
+							multiline
+							rows={4}
+						/>
+					</Grid>
+					<Grid
+						container
+						item
+						xs={12}
+						justifyContent='center'
+						spacing={2}>
+						<Grid item>
+							<Button
+								type='submit'
+								variant='contained'
+								color='primary'>
+								Submit
+							</Button>
+						</Grid>
+					</Grid>
 				</Grid>
-			</Grid>
-		</section>
+			</form>
+		</Container>
 	)
 }
 
-export default Contact
+export default ContactForm
