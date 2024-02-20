@@ -13,37 +13,10 @@ const About = () => {
         direction={"column"}
         justifyContent="center"
         alignItems="center"
-        style={{ height: "100vh" }}
+        style={{ minHeight: "100vh" }}
+        // paddingY={3}
       >
-        <div
-          style={{
-            width: "300px",
-            height: "350px",
-            borderRadius: "20%",
-            overflow: "hidden",
-            marginBottom: "20px",
-          }}
-        >
-          {/* <img
-            src={imagePath}
-            alt="Profile"
-            style={{
-              width: "100%",
-              height: "auto",
-              display: "block",
-            }}
-          /> */}
-        </div>
-        <Grid
-          item
-          xs={12}
-          sm={8}
-          md={6}
-          lg={4}
-          xl={3}
-          width={"50%"}
-          textAlign={"center"}
-        >
+        <Grid item width={{ xs: "90%", sm: "50%" }} textAlign={"center"}>
           <Typography variant="h5">{t("About.about")}</Typography>
           <p></p>
           <Typography variant="h5">{t("About.personality")}</Typography>
