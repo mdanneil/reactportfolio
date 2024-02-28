@@ -8,6 +8,10 @@
     "projects": "Projects"
   },
   "Contact": {
-    "contact": "Contact"
+    "contact": "Contact",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Message",
+    "submit": "Send"
   }
 }

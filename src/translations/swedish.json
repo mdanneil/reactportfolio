@@ -1,13 +1,17 @@
 {
   "About": {
     "about": "31 år gammal, född och uppvuxen i Uppsala men utflyttad till Göteborg 2020 för att studera Systemutveckling Java. Har jobbat med allt möjligt, bl.a. Ica, rivning/sanering, elmontör inom medtech, nattbusschaufför och ansvarig över ett par hundra hektar bomullsfält när jag backpackade. Älskar den sociala biten av serviceyrken, och problemlösningen i utvecklaryrket!",
-    "personality": "Jag är en väldigt social, glad och positiv person, och skulle själv sammanfatta mig som en glädjespridare. Jag är en nörd av rang, och kan inte låta bli att djupdyka i det mesta jag får minsta lilla intresse för, då en av mina passioner i livet är just att lära mig saker. Huruvida detta handlar om att odla chili, modda hörlurar eller hitta de bästa materialet för strumpor är mindre viktigt, huvudsaken är att jag får läsa om och lära mig något",
+    "personality": "Jag är en väldigt social, glad och positiv person, och skulle själv sammanfatta mig som en glädjespridare. Jag är en nörd av rang, och kan inte låta bli att djupdyka i det mesta jag får minsta lilla intresse för, då en av mina passioner i livet är just att lära mig saker. Huruvida detta handlar om att odla chili, modda hörlurar eller hitta de bästa materialet för strumpor är mindre viktigt, huvudsaken är att jag får läsa om och lära mig något.",
     "interests": "När jag inte kodar så har jag relativt nyligen fastnat för fiske, så när vädret tillåter är jag gärna utomhus och fiskar, eller bara allmänt är i naturen. Om vädret däremot inte tillåter det så lagar jag gärna någon rolig maträtt, läser en bra bok eller gamear. Är det någon intressant fotbollsmatch igång tittar jag gärna på den. Älskar även att utöva alla möjliga sporter, och har spelat det mesta under uppväxten."
   },
   "Projects": {
     "projects": "Projekt"
   },
   "Contact": {
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "name": "Ditt namn ",
+    "email": "Din email",
+    "message": "Meddelande",
+    "submit": "Skicka"
   }
 }
