@@ -12,6 +12,7 @@
     "name": "Ditt namn ",
     "email": "Din email",
     "message": "Meddelande",
-    "submit": "Skicka"
+    "submit": "Skicka",
+    "viewResume": "Öppna CV"
   }
 }
